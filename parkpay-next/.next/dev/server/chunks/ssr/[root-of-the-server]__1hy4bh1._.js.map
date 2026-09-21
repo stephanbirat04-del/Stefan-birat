@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file:///Users/sharonbirat/Downloads/parkpay-next/src/app/favicon.ico.mjs%20(structured%20image%20object)"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 256, height: 256 }\n"],"names":["src","width","height"],"mappings":";;;;AAAA;;uCACe;IAAEA,KAAAA,0IAAG;IAAEC,OAAO;IAAKC,QAAQ;AAAI"}},
+    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///Users/sharonbirat/Downloads/parkpay-next/src/app/page.js"],"sourcesContent":["import Hero from \"./components/Hero\";\n\nexport default function Home() {\n  return (\n    <>\n      {/* Meta tags for SEO */}\n      <head>\n        <title>ParkPay – Smart Parking Management</title>\n        <meta name=\"description\" content=\"A sleek SaaS platform for parking‑lot owners to manage spaces, payments and analytics. \" />\n      </head>\n      <main className=\"flex min-h-screen flex-col bg-gray-900\">\n        <Hero />\n      </main>\n    </>\n  );\n}\n\n"],"names":["Home","name","content","className","Hero"],"mappings":";;;;;;;;;;;;AAEe,SAASA;IACtB,qBACE;;0BAEE,8OAAC;;kCACC,8OAAC;kCAAM;;;;;;kCACP,8OAAC;wBAAKC,MAAK;wBAAcC,SAAQ;;;;;;;;;;;;0BAEnC,8OAAC;gBAAKC,WAAU;0BACd,cAAA,8OAACC;;;;;;;;;;;;;;;;AAIT"}}]
+}
