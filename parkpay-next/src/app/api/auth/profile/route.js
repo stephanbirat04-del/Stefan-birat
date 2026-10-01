@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/lib/mongodb";
+import { getDb } from "@/lib/mongodb";
 import { verifyIdToken, unauthorized } from "@/lib/auth-middleware";
 import { NextResponse } from "next/server";
 
@@ -10,7 +10,7 @@ export async function GET(req) {
   }
 
   try {
-    const { db } = await connectToDatabase();
+    const db = await getDb();
     
     // Get user profile from MongoDB
     const userProfile = await db.collection("users").findOne({

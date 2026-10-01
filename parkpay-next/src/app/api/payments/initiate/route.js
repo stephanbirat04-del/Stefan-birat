@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/lib/mongodb";
+import { getDb } from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
@@ -13,7 +13,7 @@ export async function POST(req) {
       );
     }
 
-    const { db } = await connectToDatabase();
+    const db = await getDb();
 
     // Create payment record
     const payment = {
