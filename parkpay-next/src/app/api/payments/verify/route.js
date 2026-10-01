@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/lib/mongodb";
+import { getDb } from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
 
@@ -22,7 +22,7 @@ export async function POST(req) {
       );
     }
 
-    const { db } = await connectToDatabase();
+    const db = await getDb();
 
     // Update payment status
     const result = await db.collection("payments").updateOne(

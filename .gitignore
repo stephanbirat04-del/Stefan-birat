@@ -1,1 +1,4 @@
 .next
+node_modules
+parkpay-next/node_modules
+

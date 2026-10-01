@@ -1,6 +1,6 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/lib/firebase";
-import { connectToDatabase } from "@/lib/mongodb";
+import { getDb } from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
@@ -20,7 +20,7 @@ export async function POST(req) {
     const user = userCredential.user;
 
     // Get user from MongoDB
-    const { db } = await connectToDatabase();
+    const db = await getDb();
     const userProfile = await db.collection("users").findOne({ firebase_uid: user.uid });
 
     if (!userProfile) {

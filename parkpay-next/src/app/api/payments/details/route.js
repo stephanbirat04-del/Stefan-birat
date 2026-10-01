@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/lib/mongodb";
+import { getDb } from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 
 export async function GET(req) {
@@ -13,7 +13,7 @@ export async function GET(req) {
       );
     }
 
-    const { db } = await connectToDatabase();
+    const db = await getDb();
 
     // Get payment details
     const payment = await db.collection("payments").findOne({ orderId });
